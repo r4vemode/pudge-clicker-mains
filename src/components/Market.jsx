@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useGameContext } from '../GameContext';
 import '../style.css';
+import Footer from "./Footer";
 
 const Market = () => {
   const {
@@ -40,7 +41,7 @@ const Market = () => {
   }
 
   return (
-    <div>
+    <div className={'market__container'}>
       <div className="container">
         <ul className="market__list">
           <div className="store__list-container">
@@ -68,7 +69,7 @@ const Market = () => {
             <li className="store__item " onClick={buyTower}>
               <div className="card-container">
                 <div className="tower-slot"></div>
-                <h3 className="menu__title">Установить отстрелочную вышку</h3>
+                <h3 className="menu__title">Установить вышку</h3>
                 <p className="menu__title-min">
                   3000 PUG, дает + 50 pug/sec
                 </p>
@@ -85,7 +86,9 @@ const Market = () => {
             </li>
           </div>
         </ul>
+
       </div>
+      <Footer />
     </div>
   );
 };

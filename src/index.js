@@ -10,7 +10,6 @@ root.render(
   <React.StrictMode>
     <GameProvider>
       <App />
-      <Footer />
     </GameProvider>
   </React.StrictMode>
 );

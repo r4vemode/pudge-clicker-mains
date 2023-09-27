@@ -400,6 +400,12 @@ ul{
   text-align: center;
 }
 
+.market__container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 110px;
+}
 
 @media only screen and (max-width: 600px) {
   .menu__title{
@@ -413,11 +419,16 @@ ul{
 
   .market__list{
     margin-top: 200px;
+    margin-bottom: 100px;
     flex-direction: column;
     gap: 20px;
   }
 
   .footer__container{
     margin-top: 1600px;
+  }
+
+  .market__container{
+    gap: 0px;
   }
 }
