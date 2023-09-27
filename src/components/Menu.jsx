@@ -3,12 +3,12 @@ import Store from './Store';
 import Market from './Market';
 import { useGameContext } from '../GameContext';
 import '../style.css';
-import AchivmentItem from "../UI/AchivmentItem";
-import ModalAchiv from "../UI/ModalAchiv";
-import Achiv100 from "../UI/Achiv100";
-import Achiv1000 from "../UI/Achiv1000";
-import Achiv100000 from "../UI/Achiv100000";
-import Achiv1000000 from "../UI/Achiv1000000";
+import AchivmentItem from "../UI/achivments/AchivmentItem";
+import ModalAchiv from "../UI/achivments/ModalAchiv";
+import Achiv100 from "../UI/achivments/Achiv100";
+import Achiv1000 from "../UI/achivments/Achiv1000";
+import Achiv100000 from "../UI/achivments/Achiv100000";
+import Achiv1000000 from "../UI/achivments/Achiv1000000";
 
 const Menu = () => {
   const {
