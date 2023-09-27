@@ -400,11 +400,9 @@ ul{
   text-align: center;
 }
 
-.market__container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 110px;
+
+.footer__box{
+  margin-top: 750px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -431,4 +429,6 @@ ul{
   .market__container{
     gap: 0;
   }
+
+
 }

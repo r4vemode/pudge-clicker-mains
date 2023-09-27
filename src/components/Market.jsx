@@ -56,7 +56,7 @@ const Market = () => {
     }
   };
   return (
-    <div className={'market__container'}>
+    <div>
       <div className="container">
         <ul className="market__list">
           <div className="store__list-container">
@@ -101,9 +101,10 @@ const Market = () => {
             </li>
           </div>
         </ul>
-
       </div>
-      <Footer />
+      <div className="footer__box">
+        <Footer />
+      </div>
     </div>
   );
 };

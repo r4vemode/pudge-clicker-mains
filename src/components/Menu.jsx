@@ -97,7 +97,7 @@ const Menu = () => {
   }
 
   return (
-    <div>
+    <div className={'menu__container'}>
       <section className="main">
         <h1 className="menu__titles">Накликайте кучу пуджей!</h1>
         {showModal &&
