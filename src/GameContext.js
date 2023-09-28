@@ -17,7 +17,14 @@ export const GameProvider = ({ children }) => {
   const [showModalAchievement3, setShowModalAchievement3] = useState(false);
   const [showModalAchievement4, setShowModalAchievement4] = useState(false);
   const [showModalAchievement5, setShowModalAchievement5] = useState(false);
-
+  const [creepPrice, setCreepPrice] = useState(200);
+  const [sallerPrice, setSallerPrice] = useState(700);
+  const [towerPrice, setTowerPrice] = useState(3000);
+  const [gadzaPrice, setGadzaPrice] = useState(100000);
+  const [arcanaPrice, setArcanaPrice] = useState(20000);
+  const [bottlePrice, setBottlePrice] = useState(20);
+  const [maskPrice, setMaskPrice] = useState(100);
+  const [hookPrice, setHookPrice] = useState(10000);
 
 
   useEffect(() => {
@@ -57,7 +64,23 @@ export const GameProvider = ({ children }) => {
       setShowModalAchievement2,
       setShowModalAchievement3,
       setShowModalAchievement4,
-      setShowModalAchievement5
+      setShowModalAchievement5,
+      creepPrice,
+      towerPrice,
+      sallerPrice,
+      gadzaPrice,
+      arcanaPrice,
+      bottlePrice,
+      maskPrice,
+      hookPrice,
+      setCreepPrice,
+      setSallerPrice,
+      setTowerPrice,
+      setGadzaPrice,
+      setArcanaPrice,
+      setBottlePrice,
+      setMaskPrice,
+      setHookPrice
     }}>
       {children}
     </GameContext.Provider>

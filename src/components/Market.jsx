@@ -5,16 +5,19 @@ import Footer from "./Footer";
 
 const Market = () => {
   const {
-    score,
+    creepPrice,
+    sallerPrice,
+    towerPrice,
+    gadzaPrice,
+    setCreepPrice,
+    setSallerPrice,
+    setTowerPrice,
+    setGadzaPrice,
     setScore,
-    scorePerSecond,
+    score,
     setScorePerSecond,
+    scorePerSecond
   } = useGameContext();
-
-  const [creepPrice, setCreepPrice] = useState(200);
-  const [sallerPrice, setSallerPrice] = useState(700);
-  const [towerPrice, setTowerPrice] = useState(3000);
-  const [gadzaPrice, setGadzaPrice] = useState(100000);
 
   const buyCreep = () => {
     if (score >= creepPrice) {

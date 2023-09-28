@@ -11,7 +11,7 @@ const Store = () => {
     scorePerClick,
     setScorePerClick,
     scorePerSecond,
-    setScorePerSecond
+    setScorePerSecond,
   } = useGameContext();
 
   return (

@@ -1,13 +1,23 @@
 import React, {useState} from 'react';
 import AchivmentItem from "./achivments/AchivmentItem";
+import {useGameContext} from "../GameContext";
 
 
-const ShopItems = ({componentName, score, setScore, scorePerClick, setScorePerClick, }) => {
-
-  const [arcanaPrice, setArcanaPrice] = useState(20000);
-  const [bottlePrice, setBottlePrice] = useState(20);
-  const [maskPrice, setMaskPrice] = useState(100);
-  const [hookPrice, setHookPrice] = useState(10000);
+const ShopItems = () => {
+  const {
+                     score,
+                     setScore,
+                     scorePerClick,
+                     setScorePerClick,
+                     arcanaPrice,
+                     bottlePrice,
+                     maskPrice,
+                     hookPrice,
+                     setArcanaPrice,
+                     setBottlePrice,
+                     setMaskPrice,
+                     setHookPrice
+                   } = useGameContext();
 
   const buyArcana = () => {
     if (score >= arcanaPrice) {
@@ -50,51 +60,51 @@ const ShopItems = ({componentName, score, setScore, scorePerClick, setScorePerCl
   };
 
   return (
-      <div>
-        <ul className="store__list">
+    <div>
+      <ul className="store__list">
 
-          <div className="store__list-container">
+        <div className="store__list-container">
 
-            <li className="store__item arcana-item" onClick={buybottle}>
-              <div className="card-container">
-                <div className="bottle-slot"></div>
-                <h3 className="menu__title">Мужская бутылка</h3>
-                <p className="menu__title-min">{bottlePrice} PUG, дает + 2 к клику</p>
-              </div>
-            </li>
+          <li className="store__item arcana-item" onClick={buybottle}>
+            <div className="card-container">
+              <div className="bottle-slot"></div>
+              <h3 className="menu__title">Мужская бутылка</h3>
+              <p className="menu__title-min">{bottlePrice} PUG, дает + 2 к клику</p>
+            </div>
+          </li>
 
-            <li className="store__item arcana-item" onClick={buyMask}>
-              <div className="card-container">
-                <div className="mask-slot"></div>
-                <h3 className="menu__title">Злая(очень) маска</h3>
-                <p className="menu__title-min">{maskPrice} PUG, дает + 8 к клику</p>
-              </div>
-            </li>
+          <li className="store__item arcana-item" onClick={buyMask}>
+            <div className="card-container">
+              <div className="mask-slot"></div>
+              <h3 className="menu__title">Злая(очень) маска</h3>
+              <p className="menu__title-min">{maskPrice} PUG, дает + 8 к клику</p>
+            </div>
+          </li>
 
-          </div>
+        </div>
 
-          <div className="store__list-container">
+        <div className="store__list-container">
 
-            <li className="store__item hook-item" onClick={buyHook}>
-              <div className="card-container">
-                <img className={'hook'} src="/img/hook.png" alt=""/>
-                <h3 className="menu__title">Крутой хук</h3>
-                <p className="menu__title-min">{hookPrice} PUG, дает + 30 к клику</p>
-              </div>
-            </li>
+          <li className="store__item hook-item" onClick={buyHook}>
+            <div className="card-container">
+              <img className={'hook'} src="/img/hook.png" alt=""/>
+              <h3 className="menu__title">Крутой хук</h3>
+              <p className="menu__title-min">{hookPrice} PUG, дает + 30 к клику</p>
+            </div>
+          </li>
 
-            <li className="store__item arcana-item" onClick={buyArcana}>
-              <div className="card-container">
-                <div className="arcana-slot"></div>
-                <h3 className="menu__title">Четкая аркана</h3>
-                <p className="menu__title-min">{arcanaPrice} PUG, дает + 90 к клику</p>
-              </div>
-            </li>
+          <li className="store__item arcana-item" onClick={buyArcana}>
+            <div className="card-container">
+              <div className="arcana-slot"></div>
+              <h3 className="menu__title">Четкая аркана</h3>
+              <p className="menu__title-min">{arcanaPrice} PUG, дает + 90 к клику</p>
+            </div>
+          </li>
 
-          </div>
-        </ul>
+        </div>
+      </ul>
 
-      </div>
+    </div>
   );
 };
 
